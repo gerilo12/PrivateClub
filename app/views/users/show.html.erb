@@ -1,0 +1,13 @@
+<% provide(:title, @user.first_name) %>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+      <p>Adresse Mail : <%= @user.email %></p>
+      <% if @user.id == session[:user_id] %>
+        <%= link_to "Modifie ton profil", edit_user_path(@user), class: "btn btn-primary"%>
+      <% end %>
+    </section>
+  </aside>
+</div>

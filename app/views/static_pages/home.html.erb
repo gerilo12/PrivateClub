@@ -1,0 +1,11 @@
+<% provide(:title, "Accueil") %>
+
+<div class="center jumbotron">
+  <h1>Bienvenue in Dat Private Club</h1>
+
+  <% if logged_in? %>
+    <%= link_to "Accède au club en cliquant ici !", users_path, class: "btn btn-success" %>
+  <% else %>
+    <%= link_to "Enregistre toi maintenant au club !", signup_path, class: "btn btn-primary" %>
+  <% end %>
+</div>
